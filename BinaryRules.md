@@ -13,4 +13,4 @@ HW 03 -- Codify the Revisions
 1101 ->  1    1    0    1  -> (1 * 2^3), (1*2^2), (0*2^1), (1 *2^0) -> 8 + 4 + 0 + 1 -> 13
         2^3  2^2  2^1  2^0
 
-3. Find the greatest exponent of 2 that is smaller than the given base 10 number. Using the system of assigning each value in binary to a power of 2 from the previous algorithm, 
+3. Find the greatest exponent of 2 that is less than or equal to than the given base 10 number. After finding the highest possible power of 2 that is less than or equal to the base 10 number, put a 1 to the left, and follow it by a certain number of zeros. To determine how many zeros to add to the end of the one, simply take that highest power of 2 from before, take its exponent and subract 1, thats the number of zeros you should put on the end. Afterwards, subtract the power of 2 from the base10 number. Now find the next highest power of 2 and replace the 0 corresponding to its power of 2 to a 1 (see the assignments for powers of 2 to know which 0 to replace). Repeat this until there is no remainer left.
