@@ -1,6 +1,9 @@
 TNPG: JAR (Ruby Friedman, Ariel Fuchs, Joshua Gao)
+
 APCS
+
 HW 03 -- Codify the Revisions
+
 2021-09-24
 
 0. "Base" in "Base X number system" signifies the number of unique possible values in a specific counting system. For example, in Base 6 the numbers 0-5 inclusive represent all possible number cominbations. Thusly, 10524 would be a valid number in base6, however 56123 would NOT be a valid number in base6.
