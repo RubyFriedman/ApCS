@@ -1,0 +1,41 @@
+public static void zoop() {
+    baffle();
+    System.out.print("You wugga ");
+    baffle();
+}
+
+public static void main(String[] args) {
+    System.out.print("No, I ");
+    zoop();
+    System.out.print("I ");
+    baffle();
+}
+
+public static void baffle() {
+    System.out.print("wug");
+    ping();
+}
+
+public static void ping() {
+    System.out.println(".");
+}
+
+Code for excercise 1 of chapter 4 above.
+
+1. The output of the above program when main is invoked would be:
+No, I wug.
+You wugga wug.
+I wug.
+
+2. First prints out "No, I ". Invokes zoop which invokes baffle which adds "wug"
+on to the string. ping is then invoked adding a period to the string.
+A new line is created, and the code returns to zoops second line, "You wugga "
+is added to the string of the next line. baffle is re-invoked which adds "wug"
+ping is re-invoked adding a period to the string. zoop has now been fuffilled and
+we return to main. "I " is added to a new line. baffle is invoked adding "wug" to 
+the string, ping is invoked adding a period. The function is completed and the
+final output is shown above.
+
+3. If baffle is invoked at the end of ping, this creates a never ending loop 
+between printing "wug" and "." because the functions continue to re-invoke one
+another and there is no way to stop them.
