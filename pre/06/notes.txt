@@ -1,0 +1,4 @@
+Like in python, java supports the while and for loops. They complete the same
+purpose they do in python with different syntax. While loops are given a 
+conditional, body, and increment;  whereas for loops are given an initialization
+test, body,  and increment.

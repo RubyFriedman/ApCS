@@ -1,0 +1,6 @@
+Arrays in Java are very similar to their counterpart in python however more
+primative. When creating an array pick the data type the values will be in
+(ex: int, boolean, double) and then put brackets after. So to define a new 
+array a you would write int[] a; and then to create how many values stored
+in it you would write a = new int[5]. The new command is super important in
+array making.

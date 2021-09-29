@@ -1,0 +1,4 @@
+In order to run a Java program you must first compile your code.
+The command Javac compiles the code, and then to run it you type java <file name>.
+Error messages give us the line number and the issue making them much easier
+to fix.

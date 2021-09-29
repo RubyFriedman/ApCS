@@ -1,0 +1,5 @@
+Just as there are many data types in java there are also many  return types.
+A void return type is like displaying or printing values, whereas returning 
+a string or boolean value allows us to use the resulting value in another 
+method call. Like in python you can call a method from another method like 
+using a helper procedure.

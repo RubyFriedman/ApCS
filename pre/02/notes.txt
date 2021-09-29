@@ -1,0 +1,7 @@
+In java there are many different types of data. These include double (can
+contain decimals) int (integers), boolean (true vrs false) and more. When 
+creating Java files and using parameters it's important to specify which type
+of data is going to be imputed for the parameters. Also when defining a new
+variable you must also state which data type it will contain. (Note: it is 
+possible to switch between data types like double and int though it can lead
+to error messages if done incorrectly)

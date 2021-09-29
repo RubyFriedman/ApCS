@@ -1,0 +1,5 @@
+In this section we learned about conditionals, mainly if, else if, and else
+statements. These conditionals can take in any data type, if using a variable
+to test for equality use == like in python. You cannot have an else or else if
+statement without an if statement prior. DO NOT FORGET SEMICOLONS, they are 
+super important and go on any statement line that isnt the conditional.
