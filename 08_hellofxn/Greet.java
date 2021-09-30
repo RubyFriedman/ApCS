@@ -1,3 +1,15 @@
+/**
+Ruby Friedman
+APCS
+HW08 -- Refactor Freshie Zero
+2021-09-30
+*/
+
+/**
+DISCOVERIES
+
+UNRESOLVED QUESTIONS
+*/
 public class Greet {
 	public static void main(String[] args) {
 		System.out.println(greet("Foo"));
