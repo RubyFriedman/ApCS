@@ -1,0 +1,2 @@
+Greet.java:20: error: class Grreet is public, should be
+ declared in a file named Grreet.java
