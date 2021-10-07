@@ -24,17 +24,12 @@ QCC:
  * Why must a contructor be public? Why were we 
    told it can't be private?
  * How do we get BigSib to return each individual greeting?
-
 */
 
-
-
 public class BigSib {
-
         public BigSib() {
                 helloMsg = "Word up";
         }
-
         public static String helloMsg;
 
         public static String greet(String y) {
