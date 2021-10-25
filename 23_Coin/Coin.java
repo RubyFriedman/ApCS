@@ -1,7 +1,23 @@
 /***
- *  class Coin
- *  by Clyde "Thluffy" Sinclair
- *  SKELETON
+class Coin
+Team Watson + Tiffany (Ruby Friedman & Anjini Katari)
+APCS
+HW23 -- What Does Equality Look Like?
+2021-10-24
+time spent: 02.0
+
+DISCO:
+ * Usage of null -> we now have a better understanding of how it works
+   and when to use it.
+ * More concrete understanding of how overloaded contructors work.
+
+QCC:
+ * Is there another way of making sure that the upFace values after
+   the flip are correct? (our method was an odd one)
+ * If our bias is set to 0.5 (which is supposedly neutral), why does
+   running Driver.Java only return the same upFace everytime?
+ * How/When should we use the 'this' alias?
+
  ***/
 import java.lang.Math;
 public class Coin {
