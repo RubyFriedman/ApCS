@@ -1,15 +1,6 @@
-/***
+/**
     driver for class Coin
-
-    ~~~ SUGGESTED WORKFLOW: ~~~
-    1. Compile this file and run. Note anything notable.
-    2. Move the "TOP" line down, so that it is below the first statement.
-    (emacs: with cursor at beginning of TOP line, C-k C-k, DOWN, DOWN, C-y)
-    (your editor: ???)
-    3. Compile and run again.
-    4. Resolve errors one at a time until it works.
-    5. Repeat 2-4 until TOP meets BOTTOM.
-***/
+**/
 
 public class Driver {
 
@@ -46,8 +37,6 @@ public class Driver {
       else {
         System.out.println( "No match. Firestarter you can not be." );
       }
-
-/**      ====================BOTTOM======================*/
 
   }//end main()
 
