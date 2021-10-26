@@ -53,7 +53,7 @@ public class Driver {
 
 		Coin Wuby = new Coin("dime", "tails");
 		Coin Diny = new Coin("dollar", "heads");
-		while (matchNumber < (2005 * 65536)) { 
+		while (matchNumber < (66165)) { 
 			Wuby.flip();
 			Diny.flip();
 			if (Wuby.getUpFace() == Diny.getUpFace()) {
