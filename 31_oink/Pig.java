@@ -7,7 +7,6 @@
  *
  * class Pig
  * a Pig Latin translator
- * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
  *           9
  *     ,--.-'-,--.
  *     \  /-~-\  /
@@ -17,9 +16,6 @@
  *     \   `-'   /
  *      | |---| |
  *      [_]   [_]
- *      PROTIP: Make this class compilable first,
- *      then develop and test one method at a time.
- *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
 
 DISCO:
  * When initializing a variable, use the keyword final so that
