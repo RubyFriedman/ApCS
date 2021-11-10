@@ -3,7 +3,7 @@
  * APCS
  * L00 -- Etterbay Odingcay Oughthray Ollaborationcay
  * 2021-11-10
- * time spent: 3 hrs
+ * time spent: 1.0 hrs
  *
  * class Pig
  * a Pig Latin translator
@@ -16,6 +16,7 @@
  *     \   `-'   /
  *      | |---| |
  *      [_]   [_]
+
 DISCO:
  * Methods for finding number of spaces and number of vowels are very similar
  * If you have punctuation in your input but don't adjust your method to
@@ -26,25 +27,18 @@ DISCO:
    alphabet, one in all lowercase and one in all uppercase, the indexs of the
    corresponding upper or lower case letter will be the same in each string, so
    you can seemlessly transition between them.
- * While we made similar methods for finding vowels, spaces and punctuation,
-   they differed based on how we needed to find its occurance
 
 QCC:
- * How can we condense the amount of methods we wrote in order to make the 
-   translator work?
- * Can we create a pig latin translator without the use of the many methods 
-   we have?
+ * How do you get a word after a space to go through the PL translator?
+ * Can we create a pig latin translator without the use of the many helper
+   methods we have?
+ * Is there a more efficent way to check for punctuation or capitalization?
+   What would be a faster approach to this?
 
-How we utilized the Scanner Demo:
- * We used the Scanner to run many test cases at once for translating english 
-   to pig latin.
-
-What causes the runtime error:
- * Stack overflow
-
-New in v3:
- * Our code can now translate phrases rather than single words only, in order
-   to do this we added methods such as isSpace and spaceIndex.
+NEW IN V2:
+ * The pig latin translator is now able to correctly deal with punctuation and
+   capitalization for the first letter. In addition there have been several more
+   helper methods added to make this possible, including hasPunct and firstUpper.
 
  ***/
 
@@ -148,10 +142,6 @@ public class Pig {
 		return results;
 	}
 
-	public static int firstSpace(String w) {
-		return w.indexOf(" ");
-	}
-
 	/**
 	String firstVowel(String) -- returns first vowel in a String
 	pre:  w != null
@@ -177,23 +167,6 @@ public class Pig {
 		return isAVowel( w.substring(0,1) );
 	}
 
-	public static boolean isSpace(String w) {
-		if (w.equals(" ")) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
-
-	public static int spaceIndex(String w) {
-		for (int i = 0; i< w.length(); i++) {
-			if (isSpace(w.substring(i, i + 1))) {
-				return i;
-			}
-		}
-		return -1;
-	}
 
 	/**
 	String engToPig(String) -- converts an English word to Pig Latin
@@ -205,34 +178,6 @@ public class Pig {
 	public static String engToPig( String w ) {
 		String ans = "";
 		int ind;
-		String placeHolder;
-		int space = countSpaces(w);
-		int nextSpace = 0;		
-
-		if (spaceIndex(w) != -1) {
-			while (spaceIndex(w) != -1) {
-				nextSpace = spaceIndex(w);
-				ans += engToPig(w.substring(0, nextSpace)) + " ";
-				w = w.substring(nextSpace + 1);
-			}
-			ans += engToPig(w);
-			return ans;
-		}
-
-/**		for (int i = 0; i <= space; i ++) {
-			System.out.println("countspaces: " + countSpaces(w));
-			if (countSpaces(w) > 0) {
-				placeHolder = w.substring(0, firstSpace(w));
-				ans += engToPig(placeHolder) + " ";
-				w = w.substring(firstSpace(w));
-			}
-			else {
-				ans += engToPig(w);
-				System.out.println("ans: " + ans);
-			}
-		}
-**/
-		
 		//check punct
                 if (hasPunct(w) == true) {
                         ans += engToPig(w.substring(0, (w.length() - 1)));
