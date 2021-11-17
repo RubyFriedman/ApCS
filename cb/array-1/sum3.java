@@ -1,3 +1,4 @@
+//Given an array of ints length 3, return the sum of all the elements.
 public class sum3{
 	public static int sumThree(int[] nums) {
 		return nums[0]+nums[1]+nums[2];
