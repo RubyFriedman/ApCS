@@ -1,0 +1,51 @@
+Ruby Friedman
+APCS
+HW36 -- All Quacked Up
+2021-11-18
+time spent: 0.5 hrs
+
+There are 3 types of errors in java:
+ * Compile-time errors- which occur during compiling and are usually 
+   due to syntaxing issues.
+ * Run-time errors- which occur during running of the program and
+   are usually due to stack overflow or array indexing.
+ * Logic erros- which compliles and runs just fine, and doesn't 
+   return any error messages, but the code doesn't do what you intended
+   it to do.
+
+Compile-time errors:
+When trying to fix compile-time errors, focus on the first error
+message, fix it and re-compile. It's quite common that the rest of
+the error messages cascaded down from that first error. 
+Check for syntax errors, a missing semicolon or quotation mark.
+Comment out some of the code and re compile, this can help you locate
+exactly where the error is occuring.
+Error messages from compile-time errors tell you that something is
+wrong, byt their given solutions are unreliable.
+
+Run-time errors:
+The best way to figure out what caused the run-time error is to add
+print statements.
+Print out where loops enter and exit, variable values, boolean statements,
+etc to make sure the values are correct before they are returned.
+Some examples of run-time errors include:
+ArrayIndexOutOfBoundsException - the index given isn't in the array or is negitive
+StackOverflow - usually caused by infinate loops that lack an end or base case.
+FileNotFound - Java couln't find the file, pretty self explainitory.
+ArithmaticException - an issue with the arithmatic, like a divide by 0 error.
+
+Logic errors:
+In these erros, the the compiler and interpreter won't tell you what's wrong,
+so you need to make a flow chart and trace the exacution to see where the
+error is.
+
+Some extra tips:
+Make your code easy to read and follow, this will make the debugging process
+much easier.
+Use temporary variables rather then wordy expressions to make the code more
+easy to follow.
+Print out values!
+If you need a break, take a break, come back with a fresh mind.
+Find a friend for some healthy peer review.
+Talk to your ducky, with their help eventually you'll find the bug!
+
