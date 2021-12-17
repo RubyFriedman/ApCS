@@ -24,14 +24,17 @@ public class BinSearch
 
     int tPos = -1; //init return var to flag value -1
     int m = (lo + hi) / 2; //init mid pos var
-    if (m.compareTo(target) < 0) {
-	binSearchRec(a, target, m + 1, hi);
+    if (lo > hi) {
+      return tPos;
     }
-    else if (m.compareTo(target) > 0) {
-	binSearchRec(a, target, lo, m-1);
+    if (a[m].compareTo(target) < 0) {
+	tPos = binSearchRec(a, target, m + 1, hi);
     }
-    else if (m.compareTo(target) == 0) {
-	return m;
+    else if (a[m].compareTo(target) > 0) {
+	tPos = binSearchRec(a, target, lo, m-1);
+    }
+    else if (a[m].compareTo(target) == 0) {
+	tPos = m;
     }
 
     return tPos;
@@ -45,17 +48,17 @@ public class BinSearch
 
     while(lo <= hi) { // run until lo & hi cross
       //update mid pos var
-      int m = (lo + hi) / 2;
+      m = (lo + hi) / 2;
       // target found
-      if (m == target) {
+      if (a[m].compareTo(target) == 0) {
 	return m;
       }
       // value at mid index higher than target
-      else if (target < m) {
+      else if (a[m].compareTo(target) > 0) {
 	hi = m - 1;
       }
       // value at mid index lower than target
-      else if (target > m) {
+      else if ( a[m].compareTo(target) < 0 ) {
 	lo = m +1;
       }
     }
