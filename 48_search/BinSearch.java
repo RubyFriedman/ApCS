@@ -1,7 +1,24 @@
+// Team Frogs (Ruby Friedman, Ivina Wang, Samantha Hua)
+// APCS pd07
+// HW48 -- Halving the Halves 
+// 2021-12-16
+// time spent: 0.75 hrs
+
 /**
    class BinSearch
    Binary search on array of Comparables
 **/
+
+/**
+DISCO:
+ * You can use an object that you haven't defined yet (Comparable) without it creating errors.
+ * Sometimes a FOREACH loop will not sufice because you need to access the next index to compare to.
+
+QCC:
+ * What makes BinSearch "better" than using LinSearch?
+ * Is it faster to do BinSearch/LinSearch recursively or iteratively?
+
+*/
 public class BinSearch
 {
 
@@ -15,8 +32,8 @@ public class BinSearch
   {
     //uncomment exactly 1 of the 2 stmts below:
 
-    return binSearchIter( a, target, 0, a.length-1 );
-    //return binSearchRec( a, target, 0, a.length-1 );
+    //return binSearchIter( a, target, 0, a.length-1 );
+    return binSearchRec( a, target, 0, a.length-1 );
   }
 
 
