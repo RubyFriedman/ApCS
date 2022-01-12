@@ -3,7 +3,7 @@ TNPG: Watson vs The Final Project (Anjini Katari, Ruby Friedman, Joshua Gao)
 APCS pd07
 HW54: One File to Bring Them All...
 2022-01-12w
-time spent: 0.0 hrs
+time spent: 0.4 hrs
 */
 
 import java.util.ArrayList;
