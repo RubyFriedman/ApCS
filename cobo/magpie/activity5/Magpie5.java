@@ -1,6 +1,12 @@
 import java.util.Random;
 
 /**
+TNPG: Watson vs The Final Project (Anjini Katari, Ruby Friedman, Joshua Gao)
+APCS
+HW56 -- Turing Training Wheels
+2022-01-13
+time spent: 1.5
+
  * A program to carry on conversations with a human user.
  * This version:
  *<ul><li>
@@ -284,7 +290,20 @@ public class Magpie5
 	private String [] randomResponses = {"Interesting, tell me more",
 			"Hmmm.",
 			"Do you really think so?",
-			"You don't say."
+			"You don't say.",
+			"That's totally cray.",
+			"Fiyah!",
+			"Uh...",
+			"A baluga."
 	};
 	
 }
+
+
+
+
+
+
+
+
+

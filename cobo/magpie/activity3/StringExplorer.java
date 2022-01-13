@@ -3,6 +3,9 @@
  * String methods. 
  * @author Laurie White
  * @version April 2012
+ * 
+ * If the substring doesn't occur in the string, '-1'
+   will be returned
  */
 public class StringExplorer
 {
@@ -21,6 +24,12 @@ public class StringExplorer
 		System.out.println ("After toLowerCase(), sample = " + sample);
 		
 		//  Try other methods here:
+
+		int notFoundPsn = sample.indexOf("slow");
+		System.out.println("sample.indexOf(\"slow\") = " + notFoundPsn);
+
+		int alsoNotFound = sample.indexOf("fox", 15);
+		System.out.println("sample.indexOf(\"fox\") = " + alsoNotFound);
 
 	}
 

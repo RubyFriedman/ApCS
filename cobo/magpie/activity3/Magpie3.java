@@ -1,4 +1,9 @@
 /**
+TNPG: Watson vs The Final Project (Anjini Katari, Ruby Friedman, Joshua Gao)
+APCS
+HW56 -- Turing Training Wheels
+2022-01-13
+time spent: 1.5
  * A program to carry on conversations with a human user.
  * This version: 
  * <ul><li>
@@ -45,6 +50,27 @@ public class Magpie3
 		{
 			response = "Tell me more about your family.";
 		}
+		else if (findKeyword(statement,"dog") >= 0
+				|| findKeyword(statement,"cat") >= 0)
+		{
+			response = "Tell me more about your pets.";
+		}
+		else if (findKeyword(statement,"Mykolyk") >= 0)		{
+			response = "Omg, he's my favorite teacher!";
+		}
+		else if ((statement.trim()).length() == 0)		{
+			response = "Say something, please";
+		}
+		else if (findKeyword(statement,"fun") >= 0)		{
+			response = "That's kinda funny";
+		}
+		else if (findKeyword(statement,"black")  >= 0)		{
+			response = "Black like my soul";
+		}
+		else if (findKeyword(statement,"geese") >= 0)		{
+			response = "Look at all those chickens!";
+		}
+
 		else
 		{
 			response = getRandomResponse();

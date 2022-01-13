@@ -4,7 +4,7 @@ TNPG: Watson vs The Final Project (Anjini Katari, Ruby Friedman, Joshua Gao)
 APCS
 HW56 -- Turing Training Wheels
 2022-01-13
-time spent: <elapsed time in hours, rounded to nearest tenth>
+time spent: 1.5
  * It prioritizes the responses based on order it is written in the code.
    Since we defined 'black' before 'geese', no matter what order the two 
    words are in, we will always get the response to black.
