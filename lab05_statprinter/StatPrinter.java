@@ -66,11 +66,16 @@ public class StatPrinter
   //  _frequency would be [0,0,3,2,0,1]
   public StatPrinter( ArrayList <Integer> data ) 
   { 
-	Integer Max = max(data);
-	_frequency = new ArrayList<Integer>(Max +1);
-	for (Integer i:data) {
-		_frequency.set(i, (_frequency.get(i) + 1));
-	}
+    if (data.size() > 0) {
+      int Max = (int) max(data);
+      _frequency = new ArrayList<Integer> ();
+      for(int i = 0; i < (Max + 1); i++) {
+        _frequency.add(i, 0);
+      }
+      for (Integer i : data) {
+        _frequency.set(i, (_frequency.get(i) + 1));
+      }
+    }
   }
 
 
@@ -79,13 +84,13 @@ public class StatPrinter
   //postcond: returns largest integer in data
   public Integer max( ArrayList <Integer> data ) 
   { 
-	Integer Max = data.get(0);
-	for (Integer i:data) {
-		if (i > Max) {
-			Max = i;
-		}
-	}
-	return Max;
+    Integer Max = data.get(0);
+    for (Integer i:data) {
+      if (i > Max) {
+        Max = i;
+      }
+    }
+    return Max;
   }
 
 
@@ -101,7 +106,10 @@ public class StatPrinter
   //    isLocalMode(5) -> true
   public boolean isLocalMode( int i ) 
   { 
-    /* YOUR IMPLEMENTATION HERE */
+    if ((i > 0) && (i < _frequency.size() - 1) && (_frequency.get( i - 1 ) < _frequency.get( i )) && (_frequency.get( i + 1 ) < _frequency.get( i ))) {
+      return true;
+    }
+    return false;
   }
 
 
@@ -109,8 +117,14 @@ public class StatPrinter
   //postcond: returns list of modes in _frequency
   public ArrayList<Integer> getLocalModes() 
   {
-    /* YOUR IMPLEMENTATION HERE */
-
+    ArrayList<Integer> retArray = new ArrayList<Integer>();
+    for(int i = 0; i < _frequency.size(); i++) {
+      if (isLocalMode(i)) {
+        retArray.add(_frequency.get(i));
+      }
+    }
+    
+    return retArray;
   }
 
 
@@ -118,7 +132,19 @@ public class StatPrinter
   //precond:  longestBar > 0
   public void printHistogram( int longestBar ) 
   {
-    /* YOUR IMPLEMENTATION HERE */ 
+    String output = "";
+    double scaleFactor = longestBar / (double) max(_frequency);
+    for (int i = 0; i < _frequency.size(); i++) {
+      output += i;
+      output += " : ";
+      for (int j = 0; j < _frequency.get(i) * scaleFactor; j ++) {
+        output += "*";
+      }
+      output += "\n";
+    }
+    System.out.print(output);
   }
- 
+  public ArrayList<Integer> getFreq() {
+    return _frequency;
+  }
 }//end class StatPrinter

@@ -1,5 +1,5 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// Team RKL (Kosta D, Ruby F, Lior P)
+// APCS pd07
 // L05 -- pulling it together
 // 2022-02-03r
 // time spent:  hrs
@@ -37,12 +37,12 @@ public class StatPrinterApp
     al1.add(4);
 
     StatPrinter sp1 = new StatPrinter( al1 );
-
-    /*
+    System.out.println(sp1.getFreq());
+    
       System.out.println( "sp1 testing... " );
       sp1.max( al1 );
       sp1.printHistogram( 50 );
-    */
+    
 
 
     //construct data [2,3,2,5,2,3]
@@ -57,6 +57,8 @@ public class StatPrinterApp
 
     StatPrinter sp2 = new StatPrinter( al2 );
 
+    System.out.println(sp2.getFreq());
+
     System.out.println( "sp2 testing: " );
     System.out.println( "al2 max: " + sp1.max(al2) );
     System.out.println( "local modes: " );
@@ -65,6 +67,43 @@ public class StatPrinterApp
     }
     System.out.println( "histogram:" );
     sp2.printHistogram( 50 );
+
+    ArrayList<Integer> al3 = new ArrayList<Integer>();
+    al3.add(0);
+    al3.add(1);
+    al3.add(1);
+    al3.add(2);
+    al3.add(3);
+    al3.add(3);
+    al3.add(3);
+    al3.add(3);
+    al3.add(3);
+    al3.add(4);
+    al3.add(4);       
+    al3.add(4);
+    al3.add(4);
+    al3.add(4);
+    al3.add(5);
+    al3.add(5);
+    al3.add(5);
+    al3.add(5);
+    al3.add(5);
+    al3.add(5);
+    al3.add(5);
+    al3.add(5);
+    al3.add(6);
+    al3.add(6);
+    al3.add(7);
+    al3.add(7);
+    al3.add(7);
+    al3.add(7);
+    StatPrinter sp3 = new StatPrinter( al3 );
+
+    System.out.println("sp3");
+    System.out.println( "local modes: " );
+    System.out.println(sp3.isLocalMode(0)); //-> false
+    System.out.println(sp3.isLocalMode(1)); //-> true
+    System.out.println(sp3.isLocalMode(5)); //-> true
   }
 
 }//end StatPrinterApp
