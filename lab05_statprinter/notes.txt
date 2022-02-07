@@ -1,25 +1,31 @@
-Team Phantom Tollbooth (Clyde Sinclair, Fierce Dragon)
-APCS pd0
-L05 -- pulling it together
+Team RKL (Ruby F, Leor P, Kosta D)
+APCS pd7
+L05 -- StatPrinters
 2022-02-03r
-time spent:  hrs
+time spent: 2.5 hrs
 
 
 DISCO
 ------------------------------------------------
-* 
+* Enhanced for loops
+* What a local mode is
+* The value of KtS 
+* The importance of the planning stage
 ================================================
 
 
 QCC
 ------------------------------------------------
-* 
+* What is the significance of local modes?
+* Where else are local modes used?
+* Can local modes help us sort arrays?
 ================================================
 
 
 MISC
 ------------------------------------------------
-* 
+* We added a getFreq() getter method to return the frequency array,
+    just for testing purposes. It is not relevant to the actual code.
 ================================================
 
 
