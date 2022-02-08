@@ -2,7 +2,7 @@
 // APCS pd07
 // L05 -- pulling it together
 // 2022-02-03r
-// time spent:  hrs
+// time spent: 2.5 hrs
 
 /***
  * class StatPrinterApp
