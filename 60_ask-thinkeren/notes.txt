@@ -1,0 +1,49 @@
+RKL :: Ruby Friedman, Kosta Dubovskiy, Lior Polischouk
+APCS pd07
+HW60 -- simple unit instructions -> powerful emergent behavior
+2022-02-07m
+time spent: 0.5 hrs
+
+
+DISCO
+------------------------------------------------
+* The sorting process is inefficient when all 
+  thinkers are talking at the same time.
+* Optimization can be done through outsourcing work,
+  (aka: work gets done faster by sharing)
+================================================
+
+
+QCC
+------------------------------------------------
+* To code this would we use recursion where the base
+  case is 1 "card"?
+* What if a thinker has 3 cards, do they just split
+  it into 2 and 1?
+* Is this style of sorting more efficent than selection,
+  bubble, and insertion sort, and when would we pick merge
+  sort over them? 
+================================================
+
+
+THINKER FIRMWARE
+------------------------------------------------
+* To sort the deck of cards, when handed cards,
+  the thinker should split what they have in         
+  approximately half and give each new pile to
+  a thinker that hasn't had cards yet. If the 
+  thinker has 1 card, they should hand back the 
+  card to the thinker that gave it to them. This  
+  new thinker will merge sort their current hand
+  and hand back their sorted pile to the thinker
+  that gave it to them. This repeats until the entire
+  deck of cards is back together, and sorted.
+* Don't give cards to someone who has already had
+  or has cards, unless they are the person who gave you
+  the cards and you are giving them back sorted. 
+================================================
+
+
+useful links copied from assignments page:
+https://ccl.northwestern.edu/netlogo/models/Termites
+https://www.lifewire.com/what-is-firmware-2625881
