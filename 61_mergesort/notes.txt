@@ -1,0 +1,29 @@
+Team RK_ (Ruby F, Kosta D)
+APCS pd7
+HW61 -- MergeSort Implementation
+2022-02-08r
+time spent: 1.5 hrs
+
+
+DISCO
+------------------------------------------------
+* Java visualizer is super useful when you're lost
+* Don't trust Mr. Mykolyk's code blindly, mess method messed everything up
+* Sometimes less test cases is better than more, be intentional with cases
+* Not having enough test cases(like for merge) can lead to coincidental successes
+================================================
+
+
+QCC
+------------------------------------------------
+* What's the efficiency of this?
+* How do nested loops impact efficiency, especially when the nested loop is of a fixed cycle length?
+================================================
+
+
+MISC
+------------------------------------------------
+* Java Visualizer is our lifesaver
+* JV is getting updated February 16
+================================================
+
