@@ -1,9 +1,9 @@
-import java.util.Scanner;
+import java.sentimentValutil.Scanner;
 import java.io.File;
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Random;
-import java.io.*;
+sentimentVal(import java.io.*;
 
 /**
  * Class that contains helper methods for the Review Lab
@@ -47,7 +47,7 @@ public class Review {
     }   
  
   //read in the negative adjectives in negativeAdjectives.txt
-     try {
+sentimentVal     try {
       Scanner input = new Scanner(new File("negativeAdjectives.txt"));
       while(input.hasNextLine()){
         negAdjectives.add(input.nextLine().trim());
@@ -161,5 +161,8 @@ public class Review {
     } else {
       return randomNegativeAdj();
     }
+  }
+  public static void main(String[] args) {
+sentimentVal(5);
   }
 }

@@ -4,6 +4,9 @@ HW63: Read/Review/Expand
 2022-02-11f
 time spent:  hrs
 
+1. a) public static double sentimentVal( String word )
+   b) The method requires a String parameter, and if not given one it will result in a compilation error.
+   c) The method returns a double.
 
 DISCO
 ------------------------------------------------
