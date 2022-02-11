@@ -2,25 +2,43 @@ Team RK_ (Ruby F, Kosta D)
 APCS pd07
 HW63: Read/Review/Expand
 2022-02-11f
-time spent:  hrs
+time spent: 1.5 hrs
 
-1. a) public static double sentimentVal( String word )
-   b) The method requires a String parameter, and if not given one it will result in a compilation error.
-   c) The method returns a double.
+Activity One
+   1. a) public static double sentimentVal( String word )
+      b) The method requires a String parameter, and if not given one it will result in a compilation error.
+      c) The method returns a double.
 
-DISCO
-------------------------------------------------
-* 
-================================================
+   2. Method Call               |     Return Value
+      sentimentVal("happily");  |      2.32
+      sentimentVal("terrible"); |      -3.38
+      sentimentVal("cold");     |      -0.04
+      sentimentVal("summer");   |      0.96
+      sentimentVal("winter");   |      0.77
 
+   3. a) compilable, takes string parameter returns double and assigns it
+      b) not compilable, parameter should be a string
+      c) not compilable, should take only one parameter
 
-QCC
-------------------------------------------------
-* 
-================================================
-
-
-MISC
-------------------------------------------------
-* 
-================================================
+Activity Two
+   4. Our totalSentiment method first converts our file to a string.
+      Then it iterates through the string with a for loop and splices it by consecutive spaces into words.
+      Then it removes the punctuation, and assesses the sentiment value of the current word.
+      It adds that value of the current word to the total value tracker and moves onto the next word.
+      Finally, it returns the total sentiment value. 
+   5. a) The ratings usually make sense, however in negative 
+         sentences, sometimes there are positive words like 
+         “definitely” that can throw off the rating’s accuracy.
+      b) Since a double negative would output a super negative 
+         result in totalSentiment, this method could be adjusted 
+         by testing for double negitives and making their values 
+         positive (ex “not bad”). Also when a positive word is 
+         next to a negative word this should make the score even 
+         lower (ex: super bad). A method for implementation could be
+         to multiply consecutive word values, so + then - yields - 
+         whereas - then - yields +.
+   6. This code will return 4 or 0 only, since all of the else if cases
+      are logically covered under the first if statement.
+      There is no universe in which totalSentiment < 15 is false
+      yet totalSentiment < 10 is true. A fix for this would be to reverse
+      the less than sign to a greater than sign.

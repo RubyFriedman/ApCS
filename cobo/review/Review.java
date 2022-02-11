@@ -1,9 +1,9 @@
-import java.sentimentValutil.Scanner;
+import java.util.Scanner;
 import java.io.File;
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Random;
-sentimentVal(import java.io.*;
+import java.io.*;
 
 /**
  * Class that contains helper methods for the Review Lab
@@ -47,7 +47,7 @@ public class Review {
     }   
  
   //read in the negative adjectives in negativeAdjectives.txt
-sentimentVal     try {
+    try {
       Scanner input = new Scanner(new File("negativeAdjectives.txt"));
       while(input.hasNextLine()){
         negAdjectives.add(input.nextLine().trim());
@@ -60,7 +60,7 @@ sentimentVal     try {
   }
   
   /** 
-   * returns a string containing all of the text in fileName (including punctuation), 
+   * @returns a string containing all of the text in fileName (including punctuation), 
    * with words separated by a single space 
    */
   public static String textToString( String fileName )
@@ -162,7 +162,56 @@ sentimentVal     try {
       return randomNegativeAdj();
     }
   }
+
+  /*
+  * @returns sentiment value of a review
+  */ 
+  public static double totalSentiment(String fileName) {
+    double val = 0;
+    String fileStr = textToString(fileName);
+    int lastSpace = 0;
+    String currWord = "";
+    for(int i = 0; i < fileStr.length(); i++) {
+      if (fileStr.substring(i, i + 1).equals(SPACE)) {
+        currWord = fileStr.substring(lastSpace, i);
+        lastSpace = i;
+        currWord = removePunctuation(currWord);
+        val += sentimentVal(currWord);
+        currWord = "";
+      }
+      if(i == fileStr.length() - 1) {
+        currWord = fileStr.substring(lastSpace, i);
+        currWord = removePunctuation(currWord);
+        val += sentimentVal(currWord);
+      }
+    }
+    return val;
+  }
+
+  public static int starRating(String fileName) {
+    double val = totalSentiment(fileName);
+    if (val < 0) {
+      return 1;
+    } else if (val < 7) {
+      return 2;
+    } else if (val < 15) {
+      return 3;
+    } else if (val < 30) {
+      return 4;
+    } else {
+      return 5;
+    }
+  }
+
   public static void main(String[] args) {
-sentimentVal(5);
+    //sentimentVal(5);
+   /*System.out.println(sentimentVal("happily"));
+    System.out.println(sentimentVal("terrible"));
+    System.out.println(sentimentVal("cold"));
+    System.out.println(sentimentVal("summer"));
+    System.out.println(sentimentVal("winter"));*/
+    System.out.println(totalSentiment("tester.txt"));  
+    System.out.println(starRating("tester.txt"));
+    System.out.println(sentimentVal("definitely"));
   }
 }
