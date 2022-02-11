@@ -203,6 +203,38 @@ public class Review {
     }
   }
 
+  public static void adjExtractor(String readName) {
+    String input = textToString(readName);
+    int i = input.indexOf("*");
+    int nextSpace;
+    while (i < input.length()) {
+      i = input.indexOf("*");
+      input = input.substring(i);
+      nextSpace = input.indexOf(" ");
+      String word = input.substring(1, nextSpace);
+      if (sentimentVal(word) > 0) {
+	try {
+       	FileWriter file = new FileWriter("positiveAdjectives.txt");
+	file.write(word);
+	file.close();
+	} catch (IOException e) {
+	System.out.println("error");
+	e.printStackTrace();}
+      }
+      else {
+	try {
+        FileWriter file = new FileWriter("negativeAdjectives.txt");
+        file.write(word);
+        file.close();
+        } catch (IOException e) {
+        System.out.println("error");
+        e.printStackTrace();}
+
+      }
+
+    }
+  }
+
   public static void main(String[] args) {
     //sentimentVal(5);
    /*System.out.println(sentimentVal("happily"));
@@ -213,5 +245,6 @@ public class Review {
     System.out.println(totalSentiment("tester.txt"));  
     System.out.println(starRating("tester.txt"));
     System.out.println(sentimentVal("definitely"));
+    adjExtractor("tester.txt");
   }
 }
