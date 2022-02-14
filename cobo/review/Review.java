@@ -205,34 +205,39 @@ public class Review {
 
   public static void adjExtractor(String readName) {
     String input = textToString(readName);
-    int i = input.indexOf("*");
+    input += " ";
+    int i = 0;
     int nextSpace;
-    while (i < input.length()) {
+    String pos = "";
+    String neg = "";
+
+    while (input.indexOf("*") >= 0) {
       i = input.indexOf("*");
       input = input.substring(i);
       nextSpace = input.indexOf(" ");
       String word = input.substring(1, nextSpace);
+      input = input.substring(nextSpace);
+      word = removePunctuation(word);
       if (sentimentVal(word) > 0) {
-	try {
-       	FileWriter file = new FileWriter("positiveAdjectives.txt");
-	file.write(word);
-	file.close();
-	} catch (IOException e) {
-	System.out.println("error");
-	e.printStackTrace();}
+        pos += word;
+	pos += "\n";
       }
       else {
-	try {
-        FileWriter file = new FileWriter("negativeAdjectives.txt");
-        file.write(word);
-        file.close();
-        } catch (IOException e) {
-        System.out.println("error");
-        e.printStackTrace();}
-
+	neg += word;
+	neg += "\n";
       }
 
     }
+    try {
+        FileWriter filePos = new FileWriter("positiveAdjectives.txt");
+	filePos.write(pos);
+        filePos.close();
+        FileWriter fileNeg = new FileWriter("negativeAdjectives.txt");
+        fileNeg.write(neg);
+        fileNeg.close();
+        } catch (IOException e) {
+        System.out.println("error");
+        e.printStackTrace();}
   }
 
   public static void main(String[] args) {
