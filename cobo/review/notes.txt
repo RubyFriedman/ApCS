@@ -42,3 +42,16 @@ Activity Two
       There is no universe in which totalSentiment < 15 is false
       yet totalSentiment < 10 is true. A fix for this would be to reverse
       the less than sign to a greater than sign.
+
+Activity Three
+    3. indexOf returns the index of a specififed value in a String. Substring
+       can cut up a string into parts starting and ending at a certain index,
+       inclusive of the first index and exclusive of the last index. These methods
+       can divide an existing String into 2 parts if you re-assign the old string that
+       substring value. It is necessary to add 1 to the position of the space because of
+       the *. 
+    5. Calling a static method is specific to the instance of the class, and a non-static
+       method can be called from another class.
+    6. fakeReview could be modified to pick a random positive adjective or a random negitive
+       adjective by calling those specific methods rather then the random adjective method.
+

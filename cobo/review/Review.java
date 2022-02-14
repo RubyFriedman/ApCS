@@ -230,26 +230,54 @@ public class Review {
     }
     try {
         FileWriter filePos = new FileWriter("positiveAdjectives.txt");
-	filePos.write(pos);
+	String currPos = textToString("positiveAdjectives.txt");
+	filePos.write(currPos + pos);
         filePos.close();
         FileWriter fileNeg = new FileWriter("negativeAdjectives.txt");
-        fileNeg.write(neg);
+        String currNeg = textToString("negativeAdjectives.txt");
+        fileNeg.write(currNeg + neg);
         fileNeg.close();
         } catch (IOException e) {
         System.out.println("error");
         e.printStackTrace();}
   }
-
+  public static String fakeReview (String fileName) {
+    String input = "";
+    input += textToString(fileName);
+    input += " ";
+    String result = "";
+    int lastSpace = 0;
+    ArrayList<String> words = new ArrayList<String>();
+    for (int i = 0; i < input.length(); ++i) {
+      if (input.substring(i, i+1).equals(" ")) {
+	words.add(input.substring(lastSpace, i));
+	lastSpace = i;
+       }
+    }
+    words.set(0, " "+words.get(0));
+    for (int i = 0; i < words.size(); i ++) {
+	String word = words.get(i);
+	if (word.substring(1, 2).equals("*")) {
+	  words.set(i, " " + randomAdjective());
+	}
+    }
+    for(String wor: words) {
+	result += wor;
+    }
+    return result;
+  }
   public static void main(String[] args) {
     //sentimentVal(5);
    /*System.out.println(sentimentVal("happily"));
     System.out.println(sentimentVal("terrible"));
     System.out.println(sentimentVal("cold"));
     System.out.println(sentimentVal("summer"));
-    System.out.println(sentimentVal("winter"));*/
+    System.out.println(sentimentVal("winter"));
     System.out.println(totalSentiment("tester.txt"));  
     System.out.println(starRating("tester.txt"));
     System.out.println(sentimentVal("definitely"));
     adjExtractor("tester.txt");
+*/
+    System.out.println(fakeReview("tester.txt"));
   }
 }
