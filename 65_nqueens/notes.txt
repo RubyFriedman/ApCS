@@ -1,0 +1,27 @@
+Team RKL (Ruby F, Lior P, Kosta D)
+APCS pd7
+HW65 -- nqueens
+2022-02-16r
+time spent: 2.5 hrs
+
+DISCO
+------------------------------------------------
+* Java visualizer is super useful when you're lost
+* Having a plan for recursion is really important
+* Figure out base case first and go from there
+
+================================================
+
+
+QCC
+------------------------------------------------
+* is this recursive version more efficient than a non-recursive solution?
+* How do we find other solutions to the problem if more then 1?
+* How do we count/store number of solutions?
+================================================
+
+
+MISC
+------------------------------------------------
+* JV is getting updated March 1st
+================================================
