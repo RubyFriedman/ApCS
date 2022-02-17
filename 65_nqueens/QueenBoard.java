@@ -4,7 +4,7 @@ Ruby F, Kosta D, Lior P
 APCS
 HW65 -- NQueens
 2022-02-16
-time spent: 1.5
+time spent: 2.5
 */
 
 /***
