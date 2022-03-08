@@ -28,8 +28,13 @@
  *     swap arr[b], arr[s] 
  * 
  * DISCO
- * 
+ * Tracing is very useful when trying to find patterns.
+ * Try a variety of test cases changing 1 variable at a time to see what it affects.
+ *
  * QCC
+ * Why/when would a person use this algorithm?
+ * What exactly is a javadoc?
+ * What kind of pseudo code were we given in class? Is it a language or is it just not fully coded?
  * 
  * q0: What does it do?
  * a0:
