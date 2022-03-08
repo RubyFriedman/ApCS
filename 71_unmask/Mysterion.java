@@ -37,11 +37,14 @@
  * What kind of pseudo code were we given in class? Is it a language or is it just not fully coded?
  * 
  * q0: What does it do?
- * a0:
+ * a0: It takes in an input array, and it looks at the data chunk between the inputted start and end indices.
+   * It then sorts that interval into two sections, left and right. Using the third input value, splitInd, it sets a special value.
+   * This value is used as a comparison for all array values, if an array element is less than or equal then it goes into the left section of the array,
+   * if however it is greater than the special value at the specifed index it will go in the right section. 
  * 
  * q1: O(?)
- * a1:
- * 
+ * a1: The runtime is O(n) because the operation of comparing values at indices that is inside the for loop is constant time. 
+ * Thus the function just loops through each element once, which is essentially O(n). * 
  ***/
 
 
@@ -86,33 +89,35 @@ public class Mysterion
   }
   //--------------^  HELPER METHODS  ^--------------
 
-
   /**
    * int mysterion(int[],int,int,int)
    * DESCRIP
+   * This method takes in an input array, and it looks at the data chunk between the inputted start and end indices.
+   * It then sorts that interval into two sections, left and right. Using the third input value, splitInd, it sets a special value.
+   * This value is used as a comparison for all array values, if an array element is less than or equal then it goes into the left section of the array,
+   * if however it is greater than the special value at the specifed index it will go in the right section. 
    * 
-   * @param arr
-   * @param a
-   * @param b
-   * @param c
-   * @return int 
+   * @param arr : input array
+   * @param start : start index
+   * @param end : end index
+   * @param splitInd : index of special comparative value
+   * @return int[]
    *
    */
-  public static int[] mysterion( int arr[], int a, int b, int c)
+  public static int[] splitter( int arr[], int start, int end, int splitInd)
   {
-	int v = arr[c];
-	swap(c, b, arr);
-	int s = a;
-	for (int i = a; i <b; i++) {
-		if (arr[i] < v) {
-		        swap(s, i, arr);
-			s+=1;
+	int splitVal = arr[splitInd];
+	swap(splitInd, end, arr);
+	int numSwaps = start;
+	for (int i = start; i < end; i++) {
+		if (arr[i] < splitVal) {
+            swap(i, numSwaps , arr);
+			numSwaps += 1;
 		}
 	}
-	swap(b, s, arr);
+	swap(end, numSwaps, arr);
 	return arr;
-  }//end mysterion
-
+  }//end splitter
 
   //main method for testing
   public static void main( String[] args )
@@ -130,7 +135,7 @@ public class Mysterion
     for( int testC = 0; testC < 5; testC++ ) {
     System.out.println("arr1: ");
     printArr(arr1);
-    mysterion(arr1,0,4,testC);
+    splitter(arr1,0,4,testC);
     System.out.println("after mysterion w/ a=0,b=4,c=" 
     + testC +"...");
     printArr(arr1);
@@ -138,7 +143,7 @@ public class Mysterion
     
     System.out.println("arr3:");
     printArr(arr3);
-    mysterion(arr3,0,4,testC);
+    splitter(arr3,0,4,testC);
     System.out.println("after mysterion w/ a=0,b=4,c=" 
     + testC +"...");
     printArr(arr3);
@@ -146,7 +151,7 @@ public class Mysterion
 
     System.out.println("arr4:");
     printArr(arr4);
-    mysterion(arr4,0,4,testC);
+    splitter(arr4,0,4,testC);
     System.out.println("after mysterion w/ a=0,b=4,c=" 
     + testC +"...");
     printArr(arr4);
@@ -154,7 +159,7 @@ public class Mysterion
 
     System.out.println("arr5:");
     printArr(arr5);
-    mysterion(arr5,0,4,testC);
+    splitter(arr5,0,4,testC);
     System.out.println("after mysterion w/ a=0,b=4,c=" 
     + testC +"...");
     printArr(arr5);
@@ -162,7 +167,7 @@ public class Mysterion
 
     System.out.println("arr6:");
     printArr(arr6);
-    mysterion(arr6,0,4,testC);
+    splitter(arr6,0,4,testC);
     System.out.println("after mysterion w/ a=0,b=4,c=" 
     + testC +"...");
     printArr(arr6);
