@@ -105,6 +105,7 @@ public class Mysterion
 	int s = a;
 	for (int i = a; i <b; i++) {
 		if (arr[i] < v) {
+		        swap(s, i, arr);
 			s+=1;
 		}
 	}
