@@ -2,7 +2,7 @@
 // APCS pd07
 // HW71 -- Reading for intent, tracing for VICTORY
 // 2022-03-07m
-// time spent:  hrs
+// time spent: 1.0 hrs
 
 /***
  * class Mysterion
@@ -123,7 +123,7 @@ public class Mysterion
     int[] arr3 = {1,28,33,4982,37};
     int[] arr4 = {5,4,17,9000,6};
     int[] arr5 = {3,0,16,599,1024};
-
+    int[] arr6 = {7, 1, 5, 12, 3};
 
     // run mysterion on each array,
     // holding a & b fixed, varying c...
@@ -158,7 +158,17 @@ public class Mysterion
     System.out.println("after mysterion w/ a=0,b=4,c=" 
     + testC +"...");
     printArr(arr5);
-    System.out.println("-----------------------");}
+    System.out.println("-----------------------");
+
+    System.out.println("arr6:");
+    printArr(arr6);
+    mysterion(arr6,0,4,testC);
+    System.out.println("after mysterion w/ a=0,b=4,c=" 
+    + testC +"...");
+    printArr(arr6);
+    System.out.println("-----------------------");
+   }
+
   }//end main
 
 }//end class Mysterion
