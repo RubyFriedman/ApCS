@@ -9,13 +9,15 @@
  * tests preliminary hypotheses re: utility of mystery algo
  * 
  * <h1>It's a Bird, It's a Plane! It's.... MYSTERION</h1>
- * The Mysterion method ... <YOUR TRIO'S DESCRIPTION HERE> 
+ * The Mysterion method ...  takes in an input array, and it looks at the data chunk between the inputted start and end indices.
+   * It then sorts that interval into two sections, left and right. Using the third input value, splitInd, it sets a special value.
+   * This value is used as a comparison for all array values, if an array element is less than or equal then it goes into the left section of the array,
+   * if however it is greater than the special value at the specifed index it will go in the right section.
  * <p>
  * <b>Note:</b> BLAH blah blah, yakkety schmakketty...
  * @author  Trey Parker, Matt Stone
  * @version 3.1415926535897932384626433
  * @since   2022-03-07m 
- *
  * algo as pseudocode:
  * ------------------------------
  *     v = arr[c]
