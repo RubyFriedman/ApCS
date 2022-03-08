@@ -5,7 +5,6 @@
 // time spent:  hrs
 
 /***
- * SKEELTON for
  * class Mysterion
  * tests preliminary hypotheses re: utility of mystery algo
  * 
@@ -112,7 +111,6 @@ public class Mysterion
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     //init test arrays of magic numbers
     int[] arr1 = {8,21,17,69,343};
@@ -131,7 +129,7 @@ public class Mysterion
     + testC +"...");
     printArr(arr1);
     System.out.println("-----------------------");
-
+    
     System.out.println("arr3:");
     printArr(arr3);
     mysterion(arr3,0,4,testC);
@@ -154,8 +152,7 @@ public class Mysterion
     System.out.println("after mysterion w/ a=0,b=4,c=" 
     + testC +"...");
     printArr(arr5);
-    System.out.println("-----------------------");
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    System.out.println("-----------------------");}
   }//end main
 
 }//end class Mysterion
