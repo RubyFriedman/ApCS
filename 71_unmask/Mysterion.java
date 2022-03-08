@@ -94,17 +94,17 @@ public class Mysterion
    * @return int 
    *
    */
-  public static int mysterion( int arr[], int a, int b, int c)
+  public static int[] mysterion( int arr[], int a, int b, int c)
   {
 	int v = arr[c];
-	arr = swap(c, b, arr);
+	swap(c, b, arr);
 	int s = a;
 	for (int i = a; i <b; i++) {
 		if (arr[i] < v) {
 			s+=1;
 		}
 	}
-	arr = swap(b, s, arr);
+	swap(b, s, arr);
 	return arr;
   }//end mysterion
 
