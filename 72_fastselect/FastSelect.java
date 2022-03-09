@@ -2,17 +2,31 @@
 // APCS pd07
 // HW72 --So So Fast
 // 2022-03-08m
-// time spent:  hrs
+// time spent: 1.5 hrs
 /*
+BIG OH CLASSIFICATION:
+Our algo has a O(n^2) exacution time, with 2 nested for loops.
+we understand that this could have been faster, even using merge
+sort would have yielded O(nlogn), however we wanted to use the mysterion 
+method to this.
+
 ALGO
+1. Using a for loop in method ythSmallest, we loop through editing our array using the
+former mysterion method, and change the c value up by one every time. 
+2. We exit the for loop in ythSmallest with a sorted array, then take the y-1 index which is the
+yth smallest value.
 
 BEST CASE SCENARIO: (Describe best-case scenario and justify its Big-O classification.)
+O(n^2) is the best case senerio because our algo loops through the size of the array 2 times in
+"nested" for loops.
 
 WORST CASE SCENARIO: ditto
 
 DISCO
+ * Tracing is very useful when trying to find patterns.
 
 QCC
+ * Is it possible to create this algo with a O(n) runtime, because that is the "mysterion" helper method runtime?
 
 */
 public class FastSelect {
