@@ -55,8 +55,8 @@ public class LLNode
   // override inherited toString
   public String toString()
   {
-    String foo = "{";
-    foo += cargo + " " + nextt + "}";
+    String foo = "(";
+    foo += cargo + " " + nextt + ")";
     return foo;
   }
 
