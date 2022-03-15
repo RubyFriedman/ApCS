@@ -13,7 +13,7 @@ public class LList implements List //interface def must be in this dir
   // constructor -- initializes instance vars
   public LList( )
   {
-	_head = null;
+	_head = new LLNode("", null);
 	_size = 0;
   }
 
@@ -22,40 +22,49 @@ public class LList implements List //interface def must be in this dir
 
   public boolean add( String newVal )
   {
-	_head.getNext().setNext(new LLNode(newVal, null));
-	_size += 1;
-	return true;
+    if (_head == null) {
+      _head = new LLNode(newVal, null);
+    } else {
+
+      LLNode temp = _head;
+      while (temp.getNext() != null) {
+        temp = temp.getNext();
+      }
+      temp.setNext( new LLNode(newVal, null) );
+
+    }
+    _size += 1;
+    return true;
   }
 
 
   public String get( int index )
   {
-	LLNode copy = new LLNode("", null);
+	LLNode temp = _head;
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
 
 	int counter = 0;
 	while (counter != index) {
-		copy = _head.getNext();
+		temp = temp.getNext();
 		counter += 1;
 	}
-	return copy.getCargo();
+	return temp.getCargo();
   }
 
 
   public String set( int index, String newVal )
   {
-        LLNode copy = new LLNode("", null);
+        LLNode temp = _head;
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
 
-        int counter = 0;
+        int counter = -1;
         while (counter != index) {
-                copy = _head.getNext();
+                temp = temp.getNext();
                 counter += 1;
         }
-        copy.setCargo(newVal);
-	return newVal;
+	return temp.setCargo(newVal);
   }
 
 
@@ -72,8 +81,14 @@ public class LList implements List //interface def must be in this dir
   // override inherited toString
   public String toString()
   {
+    LLNode temp = _head;
     String foo = "(";
-    foo += " " + _head + ")";
+    while(temp != null) {
+        foo += temp.getCargo();
+        foo += " ";
+        temp = temp.getNext();
+    }
+	foo += ")";
     return foo;
   }
 
