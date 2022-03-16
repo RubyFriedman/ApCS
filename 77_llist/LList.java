@@ -1,7 +1,7 @@
 // Rowing Lemurs and Leopards (Ruby Friedman, Lindsay Phung, Lawrence Joa)
 // APCS pd7
 // HW77 -- Insert|Remove
-// 2022-03-16m
+// 2022-03-16w
 // time spent: 0.5 hr
 //
 // DISCO
