@@ -1,8 +1,8 @@
 Maine Lobsters: Samantha Hua, Ruby Friedman, Nada Hameed
 APCS
 L07: But These Go Up To Eleven
-2022-03-20
-time spent: 5.0 hrs
+2022-03-21
+time spent: 6.7 hrs
 
 DISCO:
  - java -ea fileName enables assertions when running the file
@@ -61,14 +61,13 @@ Activity 4:
 
 Activity 5:
 - Buggy 1:
-	- replace Deck with Card -> there’s no Deck.java?
-	- include Deck.java -> ONLY BUG?
+	- the isEmpty method is not working correctly, and doesn’t return true for an empty deck.
 - Buggy 2:
-	- include Deck.java -> ONLY BUG #2??
+	- the size method is incorrect - it returns 0 when it should return 1 - it doesn’t properly update the size
 - Buggy 3
-	- include Deck.java -> ONLY BUG #3???
+	- it was supposed to shuffle the decks, but it did not.
 - Buggy 4
-	- include Deck.java again… -> ONLY BUG……
+	- it doesn’t know how to deal a deck of one card - the deal method can’t be properly executed.
 
 Activity 6:
 - questions:
@@ -144,3 +143,6 @@ Activity 9:
 	 3. I think both would work because they are both abstract. They outline the
 	 		methods that a class file can expect but in both cases, they must be
 			overwritten in order to compile.
+
+Activity 10:
+- we used cardAt to see if there was a king
