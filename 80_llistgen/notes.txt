@@ -1,0 +1,14 @@
+Rowing Lemurs and Leopards (Ruby Friedman, Lindsay Phung, Lawrence Joa)
+APCS pd7
+HW80 -- Generically Speaking
+2022-03-25f
+time spent: 0.5 hr
+
+DISCO:
+ * Our generalized double linked list can have nodes of different types.
+ * You can typecast to type "T" our placeholder Object.
+ * Use ctrl f to easily find and replace.
+ * If you don't give the List a type, it accepts everything.
+
+QCC:
+ * How is it that the double linked list can have nodes of different types?
