@@ -1,0 +1,15 @@
+Rowing Lemurs and Leopards (Ruby Friedman, Lindsay Phung, Lawrence Joa)
+APCS pd7
+HW82 -- Roll Your Own Iterator
+2022-03-28m
+time spent: 0.5 hr
+
+DISCO
+- We can create a class inside another class!
+- We created 'call' to fix the incompatible error as the method returns type T
+  and, since we utilized the methods in DLLNode, there is DLLNode<T>
+
+QCC
+- In the remove method, the guidelines tell us to return something when the method is void.
+  Why is this?
+- When would we choose to implement an Iterator?
