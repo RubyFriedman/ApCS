@@ -1,7 +1,7 @@
 // Rowing Lemurs and Leopards (Ruby Friedman, Lindsay Phung, Lawrence Joa)
 // APCS pd7
 // HW84 -- Stack: What Is It Good For?
-// 2022-03-30w   
+// 2022-03-30w
 // time spent: 0.5 hr
 
 /***
@@ -62,6 +62,14 @@ public class Latkes
   public boolean isFull()
   {
     return _stackSize >= _stack.length;
+  }
+
+  public String peek(){
+    return _stack[_stack.length-1-_stackSize];
+  }
+
+  public int getStackSize(){
+    return _stackSize;
   }
 
 

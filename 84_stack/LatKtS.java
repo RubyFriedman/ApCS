@@ -1,8 +1,15 @@
 // Rowing Lemurs and Leopards (Ruby Friedman, Lindsay Phung, Lawrence Joa)
 // APCS pd7
 // HW84 -- Stack: What Is It Good For?
-// 2022-03-30w   
-// time spent: 0.5 hr
+// 2022-03-30w
+// time spent: 2.0 hr
+/*
+DISCO
+* You can look at the old codingbat code for syntax
+* peek() helps to return the top of the stack
+* Stacks are helpful for ordering or reversing
+QCC
+* Why did our peek() method in Latkes.java keep causing a NullPointerException?
 /***
  * class LatKtS
  * driver class for Latkes
@@ -31,53 +38,54 @@ public class LatKtS
   }
 
 
+
   /***
    * precondition:  s contains only the characters {,},(,),[,]
    * postcondition: allMatched( "({}[()])" )    -> true
    *                allMatched( "([)]" )        -> false
    *                allMatched( "" )            -> true
    **/
-  public static boolean allMatched( String s )
-  {
-	Latkes stack = new Latkes(s.length());
-	boolean place = false;
-	for (int i = 0; i < s.length(); i++) {
-		stack.push(s.substring(i, i+1));
-		if (place) {
-			stack.pop();
-			place = false;
-		}
-                if (s.substring(i, i+2).equals("()") || s.substring(i, i+2).equals("[]") ||s.substring(i, i+2).equals("{}")) {
-			stack.pop();
-			place = true;
-			s = s.substring(0, i) + s.substring(i+1, s.length()-1);
-			i = 0;
-		}
-		if (stack.isEmpty()) {
-			return true;
-		}
-        }
-	return false;
 
+
+  public static boolean allMatched( String s){
+    if (s.isEmpty()){
+        return true;
+    }
+    Latkes stack = new Latkes(s.length());
+    for (int i = 0; i < s.length(); i++) {
+      String hi = s.substring(i, i + 1);
+
+      if (hi.equals("(") || hi.equals("[") || hi.equals("{")) {
+          stack.push(hi);
+      } else {
+        if (stack.isEmpty()) return false;
+
+        String head = stack.pop();
+        stack.push(head);
+
+        if ( (hi.equals(")") && !head.equals("(")) || (hi.equals("]") && !head.equals("[")) || (hi.equals("}") && !head.equals("{"))){
+          return false;
+        } else {
+          stack.pop();
+        }
+      }
   }
+  return stack.isEmpty();
+}
 
 
   //main method to test
   public static void main( String[] args )
   {
     System.out.println(flip("stressed"));
-    String s = "({}[()])";
-    String a = "([)]";
-    String r = "(){([])}";
-    String t = "](){([])}";
-    String b = "(){([])}(";
-    String y = "()[[]]{{{{((([])))}}}}";
-    System.out.println(allMatched( s )); //true
-    System.out.println(allMatched( a ) ); //false
-    System.out.println(allMatched( r ) ); //true
-    System.out.println(allMatched( t ) ); //false
-    System.out.println(allMatched( b ) ); //false
-    System.out.println(allMatched( y ) ); //true
+    System.out.println(allMatched( "({}[()])" )); //true
+    System.out.println(allMatched( "([)]" ) ); //false
+    System.out.println(allMatched( "(){([])}" ) ); //true
+    System.out.println(allMatched( "](){([])}" ) ); //false
+    System.out.println(allMatched( "(){([])}(" ) ); //false
+    System.out.println(allMatched( "()[[]]{{{{((([])))}}}}" ) ); //true
+    /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
+      ^~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
   }
 
 }//end class
