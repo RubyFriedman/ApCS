@@ -1,0 +1,13 @@
+Rowing Lemurs and Leopards (Ruby Friedman, Lindsay Phung, Lawrence Joa)
+APCS pd7
+HW85 -- Leon Leonwood Stack / stack but with ArrayList and Linked List
+2022-03-31r
+time spent: 0.5 hr
+
+DISCO
+- We have to make an object of type PANCAKE when popping. We can't simply return _stack.
+- We don't need stackSize due to the inherited methods in ArrayList and LinkedList.
+- ArrayList and LinkedList can not have a general type. That is why <Z> doesn't work.
+
+QCC
+- We made sure to append ALStack, LLStack, ArrayList, and LinkedList with <PANCAKE>.
