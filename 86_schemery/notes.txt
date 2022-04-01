@@ -1,0 +1,18 @@
+Rowing Lemurs and Leopards (Ruby Friedman, Lindsay Phung, Lawrence Joa)
+APCS pd7
+HW86 -- What a Racket
+2022-04-01f
+time spent: 2.0hrs
+
+DISCO
+* We consulted the ap java subset for reference to inherited methods for Stack interface.
+* For the split method, it is backslash '\\' and not forward slash '//'.
+* The split method works with ArrayLists.
+* Integer.parseInt() is useful when converting int to String. This is especially helpful
+  as we are doing operations and overload() requires a return type of String.
+* When creating multiple Stacks, we encountered some confusion concerning which Stack we
+  would push() and pop() from.
+
+QCC
+* Why was division '/' excluded in the list of operations?
+* Could we have gone about with the operations without the usage of Integer.parseInt()?
