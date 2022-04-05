@@ -6,10 +6,10 @@
 //
 // DISCO
 // * Don't forget to make LLNodes in LLNode.java of type SWASHBUCKLE.
+// * Very important to remember to add all methods to the interface so that the main method can find the symbol 
 //
 // QCC
-// * When we compile, there is an error that states that sample() method is not found
-//   "error: cannot find symbol". Why?
+// * How could we use sample in dequeue to lower time complexity
 
 /***
  * class RQueue
