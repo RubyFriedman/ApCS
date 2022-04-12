@@ -1,0 +1,17 @@
+Rowing Lemurs and Leopards (Ruby Friedman, Lindsay Phung, Lawrence Joa)
+APCS pd7
+HW90 -- Swabbing the Deque / double ended queue
+2022-04-13w
+time spent: 1.0 hrs
+
+DISCO
+* getFirst() and getLast() are similar in functionality to peekFirst() and peekLast()
+  with the difference of the latter returning null if empty.
+* There is no isEmpty() method in the API.
+* Interface Deque implements class LinkedList. Thus, we can pass through the already
+  written methods.
+
+QCC
+* Wouldn't it be more efficient to just have peekFirst() and peekLast() methods in
+  the API than to include getFirst() and getLast()?
+* How can we create a toString for a deque?
