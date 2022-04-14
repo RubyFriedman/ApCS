@@ -1,8 +1,8 @@
 Rowing Lemurs and Leopards (Ruby Friedman, Lindsay Phung, Lawrence Joa)
 APCS pd7
-HW90 -- Swabbing the Deque / double ended queue
-2022-04-13w
-time spent: 1.0 hrs
+HW91 -- Deque the Halls / double ended queue
+2022-04-14r
+time spent: 0.5 hrs
 
 DISCO
 * getFirst() and getLast() are similar in functionality to peekFirst() and peekLast()
@@ -10,8 +10,13 @@ DISCO
 * There is no isEmpty() method in the API.
 * Interface Deque implements class LinkedList. Thus, we can pass through the already
   written methods.
+* We improved the content of our Deque file by adding comments to explain each method.
+* In order to implement iterator() and addAll(Collection c), we need to import Iterator
+  and Collection.
+* Similar to how int has Object Integer, the char version of this is Character.
 
 QCC
 * Wouldn't it be more efficient to just have peekFirst() and peekLast() methods in
   the API than to include getFirst() and getLast()?
 * How can we create a toString for a deque?
+* What does it mean for an iterator to have its elements in proper sequence?
