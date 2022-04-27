@@ -1,4 +1,4 @@
-package celeb;
+//package celeb;
 /* Jerk Kafe: Joseph, Ruby, Kosta
 APCS
 L09 -- Some Folks Call It A Charades(Celebrity)
