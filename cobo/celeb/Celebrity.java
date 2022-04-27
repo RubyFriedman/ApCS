@@ -32,6 +32,10 @@ public class Celebrity
 		_clue = clue;
 		_answer = answer;
 	}
+	public Celebrity(String answer) {
+		_answer = answer;
+		_clue = "not created yet";
+	}
 
 	/**
 	 * Supplies the clue for the celebrity

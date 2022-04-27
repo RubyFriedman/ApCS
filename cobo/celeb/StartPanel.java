@@ -1,10 +1,3 @@
-/* Jerk Kafe: Joseph, Ruby, Kosta
-APCS
-L09 -- Some Folks Call It A Charades(Celebrity)
-2022-04-26
-time spent: 1.5 */
-
-
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -99,7 +92,6 @@ public class StartPanel extends JPanel
    * String to populate the clueLabel if Class Generated Celebrity is picked.
    */
   
-  
   /**
    * String used for static text in label.
    */
@@ -184,19 +176,23 @@ public class StartPanel extends JPanel
   private void setupPanel()
   {
     this.setLayout(panelLayout);
+    this.add(clueLabel);
     this.add(celebrityRadio);
     this.add(literatureRadio);
-    this.add(clueLabel);
+    this.add(answerField);
     this.add(clueField);
     this.add(startButton);
     this.add(celebrityCountLabel);
     this.add(addCelebrityButton);
 
+    // Adds the RadioButtons to the group so only one can be selected.
     celebrityRadio.setSelected(true);
     startButton.setEnabled(true);
     typeGroup.add(celebrityRadio);
     typeGroup.add(literatureRadio);
-    // Adds the RadioButtons to the group so only one can be selected.
+    
+
+
   }
   
   /**
@@ -218,19 +214,16 @@ public class StartPanel extends JPanel
     panelLayout.putConstraint(SpringLayout.EAST, celebrityCountLabel, -45, SpringLayout.EAST, this);
     
     //Put your custom radio button info here
-    
-    panelLayout.putConstraint(SpringLayout.NORTH, literatureRadio, 10, SpringLayout.SOUTH, celebrityRadio);
-    panelLayout.putConstraint(SpringLayout.WEST, literatureRadio, 0, SpringLayout.WEST, celebrityRadio);
+
     
     panelLayout.putConstraint(SpringLayout.NORTH, clueLabel, 10, SpringLayout.SOUTH, answerField);
     panelLayout.putConstraint(SpringLayout.NORTH, answerField, 40, SpringLayout.SOUTH, literatureRadio);
-    panelLayout.putConstraint(SpringLayout.WEST, answerField, 0, SpringLayout.WEST, celebrityRadio);
+
     panelLayout.putConstraint(SpringLayout.EAST, answerField, -15, SpringLayout.EAST, this);
-    
-    panelLayout.putConstraint(SpringLayout.WEST, clueField, 0, SpringLayout.WEST, celebrityRadio);
+
     panelLayout.putConstraint(SpringLayout.SOUTH, clueField, 55, SpringLayout.SOUTH, answerField);
     panelLayout.putConstraint(SpringLayout.EAST, clueField, 0, SpringLayout.EAST, answerField);
-    panelLayout.putConstraint(SpringLayout.WEST, startButton, 0, SpringLayout.WEST, celebrityRadio);
+
     panelLayout.putConstraint(SpringLayout.EAST, startButton, 0, SpringLayout.EAST, answerField);
     
   }
@@ -278,6 +271,7 @@ public class StartPanel extends JPanel
      */
     literatureRadio.addActionListener(select -> clueLabel.setText(literatureClue));
     celebrityRadio.addActionListener(select -> clueLabel.setText(celebrityClue));
+
     
   }
   

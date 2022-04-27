@@ -58,7 +58,7 @@ public class CelebrityGame
 	public boolean processGuess(String guess)
 	{
 		if (guess.trim().equalsIgnoreCase(gameCelebrity.getAnswer())) {
-			celebGameList.remove(0);
+			if (celebGameList.size() > 0) celebGameList.remove(0);
 			return true;
 		}
 		return false;
@@ -71,11 +71,8 @@ public class CelebrityGame
 	 */
 	public void play()
 	{
-		if (celebGameList != null && celebGameList.size() > 0 )
-		{
-			this.gameCelebrity = celebGameList.get(0);
-			gameWindow.replaceScreen("GAME");
-		}
+		gameCelebrity = celebGameList.get(0);
+		gameWindow.replaceScreen("GAME");
 	}
 
 	/**
