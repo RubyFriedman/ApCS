@@ -35,4 +35,16 @@ Act.2
  7. We only have one, which is overloaded with both the name and the hints to set them up at the creation of a celebrity object. Another one could be made without hints being overloaded, and they would then have to be added after genesis.
 
 Act. 3
- 1. 
+ 1. JFrame and JPanel sound the most relevant, these apparently set up the physical manifestation of the GUI interface—the window itself.
+ 2. private ArrayList<Celebrity> celebGameList; we made it private, as no one except the class should be able to directly access the entire list of answers.
+ 3. It should be public, since it is the currently active celebrity.
+ 4. Done.
+ 5. Done. 
+ 6. Done. 
+ 7. Done. 
+ 8. Done. 
+ 9. Done. 
+ 10. Done.
+ 11. Done. 
+ 12. CelebrityGame does.
+ 13. It should have no knowledge of it, otherwise the user could access it directly.
