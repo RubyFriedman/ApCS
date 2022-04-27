@@ -1,3 +1,9 @@
+/* Jerk Kafe: Joseph, Ruby, Kosta
+APCS
+L09 -- Some Folks Call It A Charades(Celebrity)
+2022-04-26
+time spent: 1.5 */
+
 import java.util.ArrayList;
 
 /**
@@ -29,6 +35,7 @@ public class CelebrityGame
 	public CelebrityGame()
 	{
 		celebGameList = new ArrayList<Celebrity>();
+		gameCelebrity = celebGameList.get(celebGameList.size());
 	}
 
 	/**
@@ -50,7 +57,14 @@ public class CelebrityGame
 	 */
 	public boolean processGuess(String guess)
 	{
-		return guess.equals(gameCelebrity.getAnswer());
+		if (guess.trim().equalsIgnoreCase(gameCelebrity().getAnswer())) {
+			celebGameList.remove(celebGameList.size());
+			if(celebGameList.size() > 0) {
+				gameCelebrity = celebGameList.get(celebGameList.size());
+			} else {
+				gameCelebrity = new Celebrity("", "");
+			}
+		}
 	}
 
 	/**
@@ -85,8 +99,7 @@ public class CelebrityGame
 	 */
 	public boolean validateCelebrity(String name)
 	{
-		return (name.length > 3);
-
+		return (name.length() > 3);
 	}
 
 	/**
@@ -98,7 +111,7 @@ public class CelebrityGame
 	 */
 	public boolean validateClue(String clue, String type)
 	{
-		return (clue.length > 9);
+		return (clue.length() > 9);
 	}
 
 	/**
@@ -108,7 +121,7 @@ public class CelebrityGame
 	 */
 	public int getCelebrityGameSize()
 	{
-		return 0;
+		return celebGameList.size();
 	}
 
 	/**

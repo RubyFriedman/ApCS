@@ -1,3 +1,10 @@
+/* Jerk Kafe: Joseph, Ruby, Kosta
+APCS
+L09 -- Some Folks Call It A Charades(Celebrity)
+2022-04-26
+time spent: 1.5 */
+
+
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
