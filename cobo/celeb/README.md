@@ -8,8 +8,8 @@ time spent: 1.0 hours
 TODO:
 - ~~set up celebrity class instance variables & methods~~
 - ~~peruse java oracle GUI API~~
-- fix the addCelebrity method
+- ~~fix the addCelebrity method~~
+- Figure out how to make the GUI window pop up
 - make the Celebrity game "play-able"
 
 
--GUI stuff

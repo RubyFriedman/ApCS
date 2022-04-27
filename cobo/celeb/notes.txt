@@ -5,8 +5,10 @@ L09 -- Some Folks Call It A Charades(Celebrity)
 time spent: 1.0hrs
 
 DISCO:
- *
+ * Files can be run from outside of their directory
+ * GUI is a lot more complicated then it seems
 
 QCC:
  * If the guesser only guesses the first name of the celebrity does that suffice?
  * How can we incorperate a "skip" method if the user decides they likely do not know who the celebrity is?
+ * Why is the GUI not working?
