@@ -3,6 +3,7 @@ APCS
 L09 -- Some Folks Call It A Charades(Celebrity)
 2022-04-26
 time spent: 1.5 */
+	// at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
 
 import java.util.ArrayList;
 
@@ -22,7 +23,7 @@ public class CelebrityGame
 	/**
 	 * The GUI frame for the Celebrity game.
 	 */
-	private CelebrityFrame gameWindow;
+private CelebrityFrame gameWindow;
 
 	/**
 	 * The ArrayList of Celebrity values that make up the game
@@ -86,8 +87,15 @@ public class CelebrityGame
 	 *            What type of celebrity
 	 */
 	public void addCelebrity(String name, String guess, String type){
-		if (validateCelebrity(name) == true && validateClue(guess, type) == true) {
-			celebGameList.add(new Celebrity(name, guess));
+		Celebrity currentCelebrity;
+		if (validateCelebrity(name) && validateClue(guess, type)) {
+			if (type.equals("Literature")){
+				currentCelebrity = new LiteratureCelebrity(name, guess);
+			}
+			else {
+				currentCelebrity = new Celebrity(name, guess);
+			}
+			this.celebGameList.add(currentCelebrity);
 		}
 	}
 
