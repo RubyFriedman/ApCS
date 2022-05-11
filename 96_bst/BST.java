@@ -3,7 +3,7 @@ Jerk Kafe :: Joseph, Ruby, Kosta
 APCS pd7
 HW96 -- BSTs is the Perfect Place for Shade
 2022-05-06f
-time spent:  hrs
+time spent: 0.5  hrs
 
 
 DISCO
