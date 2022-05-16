@@ -1,6 +1,6 @@
-import Java.util.ArrayList;
+import java.util.ArrayList;
 
-public class ArrayPriorityQueue {
+public class ArrayPriorityQueue implements PriorityQueue {
   /**
     ArrayPriorityQueue class
       IVs
@@ -48,8 +48,9 @@ public class ArrayPriorityQueue {
   public String toString() {
     String retVal = "";
     for(int i = size-1; i>=0; i--) {
-      
+      retVal += al.get(i);
     }
+    return retVal;
   }
 
   public static void main(String[] args) {
