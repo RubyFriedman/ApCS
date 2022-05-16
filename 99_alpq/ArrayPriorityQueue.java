@@ -20,12 +20,17 @@ public class ArrayPriorityQueue implements PriorityQueue {
   }
 
   public void add(int x) {
-    int ind = al.size() - 1;
-    while (ind >= 0 && al.get(ind) < x) {
+    if (isEmpty()) {
+      al.add(0, x);
+    }
+    else {
+    int ind = al.size();
+    while (ind >= 0 && al.get(ind-1) < x) {
       ind--;
     }
     al.add(ind, x);
     size++;
+    }
   }
 
   public boolean isEmpty() {
@@ -56,11 +61,15 @@ public class ArrayPriorityQueue implements PriorityQueue {
   public static void main(String[] args) {
     ArrayPriorityQueue KDubs = new ArrayPriorityQueue();
     KDubs.add(4);
+    KDubs.add(3);
+    KDubs.add(3);
+    KDubs.add(2);
+    KDubs.add(1);
     KDubs.add(4);
-    KDubs.add(4);
-    KDubs.add(4);
-    KDubs.add(4);
-    KDubs.add(4);
-    KDubs.add(4);
+    KDubs.add(5);
+    System.out.println(KDubs);
+    System.out.println(KDubs.removeMin());
+    System.out.println(KDubs.peekMin());
+    System.out.println(KDubs);
   }
 }
