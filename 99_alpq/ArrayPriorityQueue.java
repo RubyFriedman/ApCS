@@ -24,13 +24,13 @@ public class ArrayPriorityQueue implements PriorityQueue {
       al.add(0, x);
     }
     else {
-    int ind = al.size();
-    while (ind >= 0 && al.get(ind-1) <= x) {
-      ind--;
+      int ind = al.size();
+      while (ind > 0 && al.get(ind-1) > x) {
+        ind--;
+      }
+      al.add(ind, x);
     }
-    al.add(ind, x);
     size++;
-    }
   }
 
   public boolean isEmpty() {
@@ -51,10 +51,13 @@ public class ArrayPriorityQueue implements PriorityQueue {
   }
 
   public String toString() {
-    String retVal = "";
-    for(int i = size-1; i>=0; i--) {
+    String retVal = "{";
+    for(int i = 0; i<=al.size()-1; i++) {
       retVal += al.get(i);
+      retVal += " ";
+
     }
+     retVal += "}";
     return retVal;
   }
 
