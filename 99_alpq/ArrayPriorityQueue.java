@@ -25,7 +25,7 @@ public class ArrayPriorityQueue implements PriorityQueue {
     }
     else {
     int ind = al.size();
-    while (ind >= 0 && al.get(ind-1) < x) {
+    while (ind >= 0 && al.get(ind-1) <= x) {
       ind--;
     }
     al.add(ind, x);
