@@ -1,3 +1,9 @@
+Jerk Kafe :: Joseph, Ruby, Kosta
+APCS pd7
+HW101 -- Heap o'Trouble
+2022-05-17t
+time spent: 0.5 hrs
+
 - Insert the new node into the leftmost location of the lowest level (create a new
 level if necessary).
 - If this element is smaller than its parent, swap it and its parent.
